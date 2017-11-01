@@ -1,0 +1,14 @@
+include ':app', ':mycustommodule'
+
+// 1. point out what modules are you going to use
+include ':commons'
+include ':balances'
+include ':systemauthorisation'
+
+// 2. provide path to this modules. Repository for modules can be found here https://github.com/psyhitus/blockchain-android-modules
+project(':systemauthorisation').projectDir = file('../blockchain-android-modules/systemauthorisation')
+project(':commons').projectDir = file('../blockchain-android-modules/commons')
+project(':balances').projectDir = file('../blockchain-android-modules/balances')
+
+// 3. Dont forget to add modules to your build.gradle file and sync project
+// after that modules will appear in project navigator

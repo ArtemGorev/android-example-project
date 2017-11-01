@@ -1,0 +1,74 @@
+<resources>
+
+	<!-- Remove action bar from theme cause it instanriated in code -->
+	<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<!-- Customize your theme here. -->
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+	</style>
+
+	<!-- If you want to change look and feel of views please copy past all styles from commons/values/styles and override them -->
+	<!--*****************************************************************-->
+	<!--*****************************************************************-->
+	<style name="Toolbar" parent="ThemeOverlay.AppCompat.ActionBar">
+		<item name="android:textColorPrimary">@android:color/white</item>
+		<item name="selectableItemBackground">?android:selectableItemBackground</item>
+		<item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
+	</style>
+
+	<!--*****************************************************************-->
+	<!--Buttons-->
+	<style name="LightButton">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:background">@drawable/selector_button_light</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<style name="DarkButton">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:background">@drawable/selector_button_dark</item>
+		<item name="android:textColor">@color/white</item>
+	</style>
+
+	<!--*****************************************************************-->
+	<!-- CardView style -->
+	<style name="CommonCardView" >
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_margin">4dp</item>
+		<item name="cardCornerRadius">3dp</item>
+	</style>
+
+	<!--*****************************************************************-->
+	<!-- TextView style -->
+	<style name="TitleText">
+		<item name="android:textSize">15dp</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">@color/colorPrimary</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+	</style>
+
+	<style name="CommonText">
+		<item name="android:textSize">14dp</item>
+		<item name="android:textColor">@color/colorPrimary</item>
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+	</style>
+
+	<!--*****************************************************************-->
+	<!--Text Input style -->
+	<style name="MyInputLayoutStyle">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+	</style>
+
+	<style name="MyEditTextStyle">
+		<item name="android:layout_width">match_parent</item>
+		<item name="android:layout_height">wrap_content</item>
+	</style>
+
+</resources>

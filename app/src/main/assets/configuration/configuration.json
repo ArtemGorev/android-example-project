@@ -1,0 +1,38 @@
+{ // this is example of configuration file
+  "base_url":"http://40.68.249.91",
+  "modules": [
+    { // at least one module should be authorization module - the entry login point of application
+      "authorization":1,
+      "name":"SystemAuthorisation",
+      "start_module_activity": "com.ledgerleopard.systemauthorisation.functionality.login.SystemLoginActivity",
+      "icon_name":"ic_menu_log",
+      "module_id": 14,
+      "configuration":{
+        "CreateUserActivity":"com.ledgerleopard.systemauthorisation.functionality.createaccout.CreateUserActvity"
+      }
+    },
+    { // this is example of including existing module
+      "launcher_module":1,
+      "name":"Balances",
+      "start_module_activity": "com.ledgerleopard.androidexampleproject.customformview.BalanceListImpl",
+      "icon_name":"ic_menu_balance",
+      "module_id": 10,
+      "configuration":{
+        "allow_transfer":0,
+        "SendVirtualPointsActivity":"com.ledgerleopard.balances.functionality.createbalance.SendVirtualPointsActivity",
+        "TransactionHistoryViewImpl":"com.ledgerleopard.balances.functionality.transactionhistory.TransactionHistoryViewImpl"
+      }
+    },
+    {
+      "name":"UserCustomModule",
+      "start_module_activity": "com.ledgerleopard.balances.functionality.balance.BalanceActivity",
+      "icon_name":"ic_menu_balance",
+      "module_id": 777,
+      "configuration":{
+        "allow_transfer":0,
+        "SendVirtualPointsActivity":"com.ledgerleopard.balances.functionality.createbalance.SendVirtualPointsActivity",
+        "TransactionHistoryViewImpl":"com.ledgerleopard.balances.functionality.transactionhistory.TransactionHistoryViewImpl"
+      }
+    }
+  ]
+}
