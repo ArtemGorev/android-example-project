@@ -12,4 +12,5 @@ This example will show next things
 * How to create you own module and configure it correctly ( see mucustommodule )
 
 # Links
-The repository with modules available [here](https://github.com/psyhitus/blockchain-android-modules)
+* The repository with modules available [here](https://github.com/psyhitus/blockchain-android-modules)
+* Documentation for whole android ledger leopard project available [here](http://174.138.60.151:8080/mobile/android_architecture.html)
