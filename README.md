@@ -10,3 +10,6 @@ This example will show next things
 * How to customize look and feel of whole projects using colors.xml and styles.xml ( see styles.xml in main project )
 * How to customize look and feel of every form in existing module ( see BalanceListImpl.java )
 * How to create you own module and configure it correctly ( see mucustommodule )
+
+# Links
+The repository with modules available [here](https://github.com/psyhitus/blockchain-android-modules)
