@@ -27,6 +27,7 @@ dependencies {
 	compile project(':commons')
 	compile project(':systemauthorisation')
 	compile project(':balances')
+	compile project(':mycustommodule')
 
 
 	androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {

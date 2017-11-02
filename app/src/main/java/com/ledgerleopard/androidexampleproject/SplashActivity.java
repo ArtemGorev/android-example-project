@@ -10,7 +10,7 @@ import com.ledgerleopard.balances.BalanceConfig;
 import com.ledgerleopard.commons.activity.AbstractSplashActivity;
 import com.ledgerleopard.commons.model.Modules.NavigationItem;
 
-// 1. First of all extend your slpash from  AbstractSplashActivity
+// 1. First of all extend your splash from  AbstractSplashActivity
 public class SplashActivity extends AbstractSplashActivity {
 
 	@Override
@@ -27,6 +27,9 @@ public class SplashActivity extends AbstractSplashActivity {
 	}
 
 
+	// if you double tap on the splash screen this function will be executed.
+	// you can change configuration and download your own resources
+	// most of the time this function using to show dialog with ability to choose server.
 	@Override
 	public void debugFunctionStop() {
 

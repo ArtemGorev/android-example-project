@@ -4,9 +4,8 @@ import android.content.Context;
 import com.ledgerleopard.commons.BaseModel;
 
 /**
- * Created by sergeybrazhnik on 01.11.17.
+ * Implementation of module'd model
  */
-
 public class ActivityOneModelImpl extends BaseModel implements ActivityOneContract.IModel {
 
 	public ActivityOneModelImpl(Context context) {

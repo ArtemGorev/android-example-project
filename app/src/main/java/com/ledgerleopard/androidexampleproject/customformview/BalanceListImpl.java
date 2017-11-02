@@ -2,7 +2,6 @@ package com.ledgerleopard.androidexampleproject.customformview;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 import com.ledgerleopard.androidexampleproject.R;
 import com.ledgerleopard.balances.BalanceConfig;
 import com.ledgerleopard.balances.api.Balance;
@@ -20,9 +19,12 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * In this custom balance view I assume that you want to show only one first balance fr in the middle of circle
+ * This is an example of full custom view for balance module.
+ * To use this custom view implementation don't forget to point full name of this class in configuration.json
+ * "start_module_activity": "com.ledgerleopard.androidexampleproject.customformview.BalanceListImpl"
+ *
+ * I assume that you want to show only one first balance in this implementation
  */
-
 public class BalanceListImpl
 	extends AbstractModuleActivity<BalanceConfig, BalanceContract.Presenter>
 	implements BalanceContract.View {
@@ -31,11 +33,10 @@ public class BalanceListImpl
 	private CustomButton btnSend;
 	private CustomButton btnHistory;
 	private CustomTextView tvBalanceName;
-	private ImageView ivRefresh;
 
 	@Override
 	public void showBalanceList(List<BaseElementAdapter> data) {
-		if (data.get(0) instanceof BalanceElementAdapter) {
+		if (data.size() != 0 ) {
 			tvBalanceAmount.setText(((BalanceElementAdapter)data.get(0)).amount+"");
 			tvBalanceName.setText("My custom points");
 		}
@@ -68,18 +69,19 @@ public class BalanceListImpl
 
 	@Override
 	public void stopRefreshing() {
-		// not used in this view implementation
+		// this method should not be implemented for this custom view
 	}
 
 	@Override
 	protected void checkConfiguration(BalanceConfig balanceConfig) {
-
+		// no required parameters to check
 	}
 
 	@Override
 	protected void initMVP() {
-		presenter = new BalancePresenter(this
-			, new BalanceModel(this, startActivityEntity.token, startActivityEntity.baseUrl), configuration);
+		presenter = new BalancePresenter(this,
+			new BalanceModel(this, startActivityEntity.token, startActivityEntity.baseUrl),
+			configuration);
 	}
 
 	@Override

@@ -5,7 +5,6 @@
       "authorization":1,
       "name":"SystemAuthorisation",
       "start_module_activity": "com.ledgerleopard.systemauthorisation.functionality.login.SystemLoginActivity",
-      "icon_name":"ic_menu_log",
       "module_id": 14,
       "configuration":{
         "CreateUserActivity":"com.ledgerleopard.systemauthorisation.functionality.createaccout.CreateUserActvity"
@@ -15,7 +14,7 @@
       "launcher_module":1,
       "name":"Balances",
       "start_module_activity": "com.ledgerleopard.androidexampleproject.customformview.BalanceListImpl",
-      "icon_name":"ic_menu_balance",
+      "icon_name":"ic_coins",
       "module_id": 10,
       "configuration":{
         "allow_transfer":0,
@@ -25,13 +24,11 @@
     },
     {
       "name":"UserCustomModule",
-      "start_module_activity": "com.ledgerleopard.balances.functionality.balance.BalanceActivity",
-      "icon_name":"ic_menu_balance",
+      "start_module_activity": "com.ledgerleopard.mycustommodule.functionality.activityone.ActivityOne",
+      "icon_name":"check",
       "module_id": 777,
       "configuration":{
-        "allow_transfer":0,
-        "SendVirtualPointsActivity":"com.ledgerleopard.balances.functionality.createbalance.SendVirtualPointsActivity",
-        "TransactionHistoryViewImpl":"com.ledgerleopard.balances.functionality.transactionhistory.TransactionHistoryViewImpl"
+        "buttonVisibilityParameter":1
       }
     }
   ]

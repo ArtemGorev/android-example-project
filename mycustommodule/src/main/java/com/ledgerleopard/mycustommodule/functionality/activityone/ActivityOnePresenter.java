@@ -4,9 +4,10 @@ import com.ledgerleopard.commons.BasePresenter;
 import com.ledgerleopard.mycustommodule.CustomModuleConfig;
 
 /**
- * Created by sergeybrazhnik on 01.11.17.
+ * This is implementation of module presenter
+ * Presenter is a middle man between view and model
+ * Exactly presenter contains all business login of form
  */
-
 public class ActivityOnePresenter
 	extends BasePresenter<CustomModuleConfig, ActivityOneContract.IView, ActivityOneContract.IModel, ActivityOneViewModel>
 	implements ActivityOneContract.IPresenter {
@@ -17,12 +18,12 @@ public class ActivityOnePresenter
 
 	@Override
 	public void onStart() {
-		view.enableButton(configuration.customParameter == 1);
+		view.enableButton(configuration.buttonVisibilityParameter == 1);
 	}
 
 	@Override
 	public void myButtonClicked() {
-		String result = model.executeRequest();
-		view.showResult(result);
+		vm.titleText = model.executeRequest();
+		view.showResult(vm.titleText);
 	}
 }
